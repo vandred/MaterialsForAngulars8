@@ -11,15 +11,15 @@ import { StructDirective } from './directives/struct.directive';
 import { HomePageComponent } from './components/pages/home-page/home-page.component';
 
 const routes: Routes = [
+  { path: '', component: HomePageComponent },
   { path: 'ngif', component: PageIfComponent },
-  { path: 'bind', component: PageForComponent },
-  { path: 'ngcontent', component: PageSwitchComponent },
-  { path: 'parent3', component: PageCustomeComponent },
-  { path: 'interections', component: PageCustome2Component },
-  { path: 'parent3/:id', component: HostListenerDirective },
-  { path: 'lifecycle', component: HostBindingDirective },
-  { path: 'viewchied', component: StructDirective },
-  { path: 'contentchild', component: HomePageComponent }
+  { path: 'for', component: PageForComponent },
+  { path: 'switch', component: PageSwitchComponent },
+  { path: 'caustom', component: PageCustomeComponent },
+  { path: 'custom2', component: PageCustome2Component },
+  { path: 'hostlisten', component: HostListenerDirective },
+  { path: 'hostbind', component: HostBindingDirective },
+  { path: 'structdirective', component: StructDirective }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

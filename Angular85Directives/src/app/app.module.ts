@@ -5,6 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SHowHideDirective } from './directives/show-hide.directive';
 import { AddStylesDirective } from './directives/add-styles.directive';
+import { HostListenerDirective } from './directives/host-listener.directive';
+import { HostBindingDirective } from './directives/host-binding.directive';
+import { StructDirective } from './directives/struct.directive';
+
+import { BoldActiveHostDirective } from './directives/bold-active-host.directive';
+import { BoldActiveDirective } from './directives/bold-active.directive';
+import { BoldActive2Directive } from './directives/bold-active2.directive';
+import { BoldInputDirective } from './directives/bold-input.directive';
+
+
 import { HeaderComponent } from './components/layout/header/header.component';
 import { SidebarComponent } from './components/layout/sidebar/sidebar.component';
 import { PageIfComponent } from './components/pages/page-if/page-if.component';
@@ -12,9 +22,7 @@ import { PageForComponent } from './components/pages/page-for/page-for.component
 import { PageSwitchComponent } from './components/pages/page-switch/page-switch.component';
 import { PageCustomeComponent } from './components/pages/page-custome/page-custome.component';
 import { PageCustome2Component } from './components/pages/page-custome2/page-custome2.component';
-import { HostListenerDirective } from './directives/host-listener.directive';
-import { HostBindingDirective } from './directives/host-binding.directive';
-import { StructDirective } from './directives/struct.directive';
+
 import { HomePageComponent } from './components/pages/home-page/home-page.component';
 
 @NgModule({
@@ -32,6 +40,10 @@ import { HomePageComponent } from './components/pages/home-page/home-page.compon
     HostListenerDirective,
     HostBindingDirective,
     StructDirective,
+    BoldActiveHostDirective,
+    BoldActiveDirective,
+    BoldActive2Directive,
+    BoldInputDirective,
     HomePageComponent
   ],
   imports: [
