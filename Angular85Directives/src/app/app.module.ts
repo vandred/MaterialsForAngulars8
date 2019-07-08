@@ -15,6 +15,7 @@ import { PageCustome2Component } from './components/pages/page-custome2/page-cus
 import { HostListenerDirective } from './directives/host-listener.directive';
 import { HostBindingDirective } from './directives/host-binding.directive';
 import { StructDirective } from './directives/struct.directive';
+import { HomePageComponent } from './components/pages/home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { StructDirective } from './directives/struct.directive';
     PageCustome2Component,
     HostListenerDirective,
     HostBindingDirective,
-    StructDirective
+    StructDirective,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,

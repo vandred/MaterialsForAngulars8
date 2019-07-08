@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageForComponent implements OnInit {
 
+  items = [
+    'Apple iPhone SX',
+    'Huawei Mate 9',
+    'Samsung Galaxy S10',
+    'Motorola Moto Z'
+  ];
   constructor() { }
 
   ngOnInit() {
