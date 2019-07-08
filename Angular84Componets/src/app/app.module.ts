@@ -19,6 +19,7 @@ import { Parent3Component } from './components/pages/page-interection/parent3/pa
 import { PageLifeCycleComponent } from './components/pages/page-life-cycle/page-life-cycle.component';
 import { PageViewChildComponent } from './components/pages/page-view-child/page-view-child.component';
 import { PageContentChildComponent } from './components/pages/page-content-child/page-content-child.component';
+import { ChildComponent } from './components/pages/page-view-child/child/child.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { PageContentChildComponent } from './components/pages/page-content-child
     Parent3Component,
     PageLifeCycleComponent,
     PageViewChildComponent,
-    PageContentChildComponent
+    PageContentChildComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageViewChildComponent implements OnInit {
 
+  name = 'Test Text';
   constructor() { }
 
   ngOnInit() {

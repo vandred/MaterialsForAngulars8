@@ -1,1 +1,11 @@
 <p>page-view-child works!</p>
+<p #userName>{{name}}</p>
+<p>{{userName.textContent}}</p>
+<input type="text" [(ngModel)]="name" />
+
+<hr />
+<div>
+    <app-child-comp #counter></app-child-comp>
+    <button (click)="counter.increment()">+</button>
+    <button (click)="counter.decrement()">-</button>
+</div>
