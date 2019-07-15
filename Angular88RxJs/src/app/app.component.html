@@ -3,19 +3,44 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
 <h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="float-left">
+  <ul>
+    <li>
+      <h4>01-intro</h4>
+    </li>
+    <li> <a routerLink="/sample1" routerLinkActive="active">01-create</a> <br /></li>
+    <li><a routerLink="/sample2" routerLinkActive="active">02-dispose-problem</a> <br /></li>
+    <li><a routerLink="/sample3" routerLinkActive="active">03-dispose-implementation</a> <br /></li>
+    <li><a routerLink="/sample4" routerLinkActive="active">04-errors</a> <br /></li>
+    <li> <a routerLink="/sample5" routerLinkActive="active">05-observable-vs-promise</a> <br /></li>
+    <li>
+      <h4>02-create</h4>
+    </li>
+    <li><a routerLink="/sample6" routerLinkActive="active">01-create-sample</a> <br /></li>
+    <li><a routerLink="/sample7" routerLinkActive="active">02-from-event</a> <br /></li>
+    <li>
+      <h4>03-observable-samples</h4>
+    </li>
+    <li><a routerLink="/sample8" routerLinkActive="active">01-throtteled-buffering</a> <br /></li>
+    <li><a routerLink="/sample9" routerLinkActive="active">02-flat-map-vs-map</a> <br /></li>
+    <li><a routerLink="/sample10" routerLinkActive="active">03-toggle-stream</a> <br /></li>
+    <li><a routerLink="/sample11" routerLinkActive="active">04-catch</a> <br /></li>
+    <li><a routerLink="/sample12" routerLinkActive="active">05-cold-observable</a> <br /></li>
+    <li><a routerLink="/sample13" routerLinkActive="active">06-hot-observable</a> <br /></li>
+    <li><a routerLink="/sample14" routerLinkActive="active">07-hot-connect</a> <br /></li>
+    <li><a routerLink="/sample15" routerLinkActive="active">08-subject</a> <br /></li>
+    <li><a routerLink="/sample16" routerLinkActive="active">09-behavior-subject</a> <br /></li>
+    <li><a routerLink="/sample17" routerLinkActive="active">10-http-sample</a> <br /></li>
+    <li><a routerLink="/sample171" routerLinkActive="active">post-http-sample</a> <br /></li>
+    <li>
+      <h4>04-service</h4>
+    </li>
+    <li> <a routerLink="/sample18" routerLinkActive="active">01-main-component</a> <br /></li>
+  </ul>
+</div>
 
-<router-outlet></router-outlet>
+<div class="conteiner-fluid">
+  <router-outlet></router-outlet>
+</div>
