@@ -1,13 +1,13 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input } from '@angular/core';
 
-import { ElementBase } from "../model/element-base";
-import { ElementsService } from "../shared/elements.service";
-import { FormGroup } from "@angular/forms";
+import { ElementBase } from '../../../shared/model/element-base';
+import { ElementsService } from '../../../shared/elements.service';
+import { FormGroup } from '@angular/forms';
 
 @Component({
-  selector: "dynamic-form",
-  templateUrl: "./dynamic-form.component.html",
-  styleUrls: ["./dynamic-form.component.css"],
+  selector: 'dynamic-form',
+  templateUrl: './dynamic-form.component.html',
+  styleUrls: ['./dynamic-form.component.css'],
   providers: [ElementsService]
 })
 export class DynamicFormComponent implements OnInit {
@@ -22,7 +22,7 @@ export class DynamicFormComponent implements OnInit {
   }
 
   onSubmit() {
-    if(this.form.valid) {
+    if (this.form.valid) {
       console.log(this.form.value);
     }
   }

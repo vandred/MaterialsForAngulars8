@@ -1,18 +1,18 @@
-import { Component, Input } from "@angular/core";
-import { FormGroup } from "@angular/forms";
+import { Component, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
-import { ElementBase } from "../model/element-base";
+import { ElementBase } from '../../../shared/model/element-base';
 
 @Component({
-  selector: "dynamic-form-element",
-  templateUrl: "./dynamic-form-element.component.html",
-  styleUrls: ["./dynamic-form-element.component.css"]
+  selector: 'dynamic-form-element',
+  templateUrl: './dynamic-form-element.component.html',
+  styleUrls: ['./dynamic-form-element.component.css']
 })
 export class DynamicFormElementComponent {
 
-  @Input() 
+  @Input()
   public element: ElementBase<any>;
-  @Input() 
+  @Input()
   form: FormGroup;
 
   constructor() { }
