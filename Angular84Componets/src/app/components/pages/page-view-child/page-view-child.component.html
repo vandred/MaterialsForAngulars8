@@ -3,9 +3,17 @@
 <p>{{userName.textContent}}</p>
 <input type="text" [(ngModel)]="name" />
 
+<p>{{userName.textContent}}</p>
+<p>{{userName.textContent}}</p>
+<a>{{userName.textContent}}</a>
 <hr />
 <div>
     <app-child-comp #counter></app-child-comp>
     <button (click)="counter.increment()">+</button>
     <button (click)="counter.decrement()">-</button>
+</div>
+<div>
+    <app-child-comp #counter1></app-child-comp>
+    <button (click)="counter1.increment()">+</button>
+    <button (click)="counter1.decrement()">-</button>
 </div>

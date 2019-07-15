@@ -7,6 +7,7 @@ import { SHowHideDirective } from './directives/show-hide.directive';
 import { AddStylesDirective } from './directives/add-styles.directive';
 import { HostListenerDirective } from './directives/host-listener.directive';
 import { HostBindingDirective } from './directives/host-binding.directive';
+import { BoldDirective } from './directives/bold.directive';
 import { StructDirective } from './directives/struct.directive';
 
 import { BoldActiveHostDirective } from './directives/bold-active-host.directive';
@@ -44,6 +45,7 @@ import { HomePageComponent } from './components/pages/home-page/home-page.compon
     BoldActiveDirective,
     BoldActive2Directive,
     BoldInputDirective,
+    BoldDirective,
     HomePageComponent
   ],
   imports: [

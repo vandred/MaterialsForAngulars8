@@ -18,4 +18,11 @@ export class PipeHolderComponent implements OnInit {
   ngOnInit() {
   }
 
+  pipeFunc(inputString: string): string {
+
+    inputString = inputString.slice(1, 5);
+
+    return inputString;
+  }
+
 }

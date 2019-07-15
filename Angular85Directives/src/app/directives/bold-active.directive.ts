@@ -9,7 +9,7 @@ export class BoldActiveDirective {
     this.renderer.setStyle(this.element.nativeElement, 'cursor', 'pointer');
   }
 
-  @HostListener('mouseenter')
+  @HostListener('mouseclick')
   onMouseEnter() {
     this.setFontWeight('bold');
   }
