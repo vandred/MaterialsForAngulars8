@@ -13,8 +13,10 @@ import { ToggleStreamComponent } from './components/03-observable-samples/03-tog
 import { CatchComponent } from './components/03-observable-samples/04-catch/catch.component';
 import { ColdObservableComponent } from './components/03-observable-samples/05-cold-observable/cold-observable.component';
 import { HotObservableComponent } from './components/03-observable-samples/06-hot-observable/hot-observable.component';
+// tslint:disable-next-line: max-line-length
 import { HotObservableConnectComponent } from './components/03-observable-samples/07-hot-observable-connect/hot-observable-connect.component';
 import { SubjectComponent } from './components/03-observable-samples/08-subject/subject.component';
+import { Subject2Component } from './components/03-observable-samples/08-subject2/subject2.component';
 import { BehaviorSubjectComponent } from './components/03-observable-samples/09-behavior-subject/behavior-subject.component';
 import { HttpSampleComponent } from './components/03-observable-samples/10-http-sample/http-sample.component';
 import { PostHttpSampleComponent } from './components/03-observable-samples/post-http-sample/post-http-sample.component';
@@ -36,6 +38,7 @@ const routes: Routes = [
   { path: 'sample13', component: HotObservableComponent },
   { path: 'sample14', component: HotObservableConnectComponent },
   { path: 'sample15', component: SubjectComponent },
+  { path: 'sample152', component: Subject2Component },
   { path: 'sample16', component: BehaviorSubjectComponent },
   { path: 'sample17', component: HttpSampleComponent },
   { path: 'sample171', component: PostHttpSampleComponent },

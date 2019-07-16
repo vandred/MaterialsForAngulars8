@@ -13,6 +13,7 @@ import { SubjectComponent } from './08-subject/subject.component';
 import { BehaviorSubjectComponent } from './09-behavior-subject/behavior-subject.component';
 import { HttpSampleComponent } from './10-http-sample/http-sample.component';
 import { PostHttpSampleComponent } from './post-http-sample/post-http-sample.component';
+import { Subject2Component } from './08-subject2/subject2.component';
 
 @NgModule({
   imports: [CommonModule, HttpClientModule, FormsModule, ReactiveFormsModule],
@@ -27,7 +28,8 @@ import { PostHttpSampleComponent } from './post-http-sample/post-http-sample.com
     SubjectComponent,
     BehaviorSubjectComponent,
     HttpSampleComponent,
-    PostHttpSampleComponent
+    PostHttpSampleComponent,
+    Subject2Component
   ]
 })
-export class ObservableSamplesModule {}
+export class ObservableSamplesModule { }
