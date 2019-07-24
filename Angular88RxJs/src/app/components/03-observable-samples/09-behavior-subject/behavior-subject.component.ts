@@ -6,7 +6,7 @@ import { BehaviorSubject, ReplaySubject } from 'rxjs';
   templateUrl: './behavior-subject.component.html'
 })
 export class BehaviorSubjectComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     console.clear();

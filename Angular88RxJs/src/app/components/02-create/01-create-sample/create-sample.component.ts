@@ -10,15 +10,15 @@ import { map, filter, scan, take } from 'rxjs/operators';
   templateUrl: './create-sample.component.html'
 })
 export class CreateSampleComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     console.clear();
 
-    var source = from([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]); // создание потока на основе массива. Метод from выполняет необходимые конвертации для получения значений из массива
+    //var source = from([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]); // создание потока на основе массива. Метод from выполняет необходимые конвертации для получения значений из массива
     // var source = of(0, 1, 2, 3, 4, 5, 6, 7, 8, 9); // создание потока на основе значений
 
-    //const source = interval(500).pipe(take(10)); // interval увеличивает число и помещает его в поток
+    const source = interval(500).pipe(take(20)); // interval увеличивает число и помещает его в поток
 
     source
       // поток в котором находятся четные элементы

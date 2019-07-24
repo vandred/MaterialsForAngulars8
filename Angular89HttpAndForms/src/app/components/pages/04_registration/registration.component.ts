@@ -30,7 +30,7 @@ export class Registration4Component implements OnInit {
       Validators.pattern("[^ @]*@[^ @]*")
     ]);
     this.password = new FormControl("", [
-      Validators.minLength(8),
+      Validators.minLength(10),
       Validators.required
     ]);
   }

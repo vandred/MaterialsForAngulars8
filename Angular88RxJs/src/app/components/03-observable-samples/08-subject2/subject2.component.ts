@@ -12,10 +12,10 @@ export class Subject2Component implements OnInit {
   public subscriberIndex = 0;
   public counter = 0;
 
-  // public subject = new Subject<number>();
+  public subject = new Subject<number>();
   // public subject = new BehaviorSubject<number>(0);
   // public subject = new ReplaySubject<number>(Number.POSITIVE_INFINITY, 3000);
-  public subject = new AsyncSubject<number>();
+  // public subject = new AsyncSubject<number>();
 
   constructor() { }
 
@@ -34,7 +34,7 @@ export class Subject2Component implements OnInit {
   subscribe() {
     this.subscriberIndex++;
     const subscriberValues = [];
-    this.subscribersValues.push(subscriberValues)
+    this.subscribersValues.push(subscriberValues);
     this.subject.subscribe(value => subscriberValues.push(value));
   }
 

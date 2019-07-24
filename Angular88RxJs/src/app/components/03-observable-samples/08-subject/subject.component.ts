@@ -6,7 +6,7 @@ import { ReplaySubject } from 'rxjs';
   templateUrl: './subject.component.html'
 })
 export class SubjectComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     console.clear();
@@ -17,7 +17,7 @@ export class SubjectComponent implements OnInit {
     const subject = new ReplaySubject();
 
     const subscription = subject.subscribe(
-      r => console.log(r),
+      r => console.log('result', r),
       e => console.error(e),
       () => console.log('completed')
     );
@@ -25,6 +25,7 @@ export class SubjectComponent implements OnInit {
     subject.next(1);
     subject.next(2);
     subject.next(3);
+    subject.next(4);
 
     subject.complete();
 

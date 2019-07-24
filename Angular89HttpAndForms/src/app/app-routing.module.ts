@@ -26,9 +26,9 @@ const routes: Routes = [
   { path: 'registration7', component: Registration7Component },
   { path: 'registration8', component: Registration8Component },
   { path: 'registrationdynamo', component: DynamicFormComponent },
-  { path: 'GetUsers', component: GetUsersComponent },
+  { path: 'GetValues', component: GetUsersComponent },
   { path: 'PostUsers', component: PostUsersComponent },
-  { path: 'GetValues', component: GetValuesComponent },
+  { path: 'GetValues1', component: GetValuesComponent },
   { path: 'PostValues', component: PostValuesComponent },
   { path: 'PutValues', component: PutValuesComponent }
   // { path: '**', component: NotFoundComponent }

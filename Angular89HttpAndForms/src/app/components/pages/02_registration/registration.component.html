@@ -3,7 +3,7 @@
 </div>
 <form novalidate [formGroup]="registrationForm">
   <fieldset formGroupName="name">
-    
+
     <div class="form-group" [ngClass]="{
       'has-error': registrationForm.controls.name.controls.firstName.invalid 
                   && registrationForm.controls.name.controls.firstName.dirty,
@@ -13,7 +13,7 @@
       <input type="text" class="form-control" formControlName="firstName">
     </div>
 
-    <div class="form-group"[ngClass]="{
+    <div class="form-group" [ngClass]="{
       'has-error': registrationForm.controls.name.controls.lastName.invalid 
                   && registrationForm.controls.name.controls.lastName.dirty,
       'has-success': registrationForm.controls.name.controls.lastName.valid 
@@ -40,5 +40,5 @@
 </form>
 
 <br>
-
+<pre>{{registrationForm.valid}}</pre>
 <pre>{{registrationForm.value |json}}</pre>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -6,14 +6,14 @@ import { Observable } from 'rxjs';
   templateUrl: './dispose-problem.component.html'
 })
 export class DisposeProblemComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     console.clear();
 
     // создание Observable
-    let source = Observable.create(function(observer) {
-      setTimeout(function() {
+    let source = Observable.create(function (observer) {
+      setTimeout(function () {
         console.log('timeout');
         observer.next(100);
         observer.complete();
@@ -23,21 +23,21 @@ export class DisposeProblemComponent implements OnInit {
     });
 
     var subject = source.subscribe(
-      function(value) {
+      function (value) {
         // onNext
         console.log('next ' + value);
       },
-      function(error) {
+      function (error) {
         // onError
         console.error(error);
       },
-      function() {
+      function () {
         // onCompleted
         console.log('completed');
       }
     );
 
-    setTimeout(function() {
+    setTimeout(function () {
       subject.unsubscribe();
       console.log('unsubscribed');
     }, 500);

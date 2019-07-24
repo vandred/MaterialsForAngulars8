@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-observable-vs-promise',
   templateUrl: './observable-vs-promise.component.html'
 })
-export class ObservableVsPromiseComponent implements OnInit {
-  constructor() {}
+export class ObservableVsPromiseComponent implements OnInit, OnDestroy {
+  constructor() { }
 
   ngOnInit() {
     // Использование Promise
@@ -24,8 +24,8 @@ export class ObservableVsPromiseComponent implements OnInit {
     });
 
     // Использование Observable
-    var observable = Observable.create(observer => {
-      var id = setTimeout(() => {
+    const observable = Observable.create(observer => {
+      const id = setTimeout(() => {
         console.log('Observable timeout');
         observer.next(100);
       }, 1000);
@@ -50,6 +50,10 @@ export class ObservableVsPromiseComponent implements OnInit {
 
     setTimeout(() => {
       subscriber.unsubscribe();
-    }, 500);
+    }, 5500);
+  }
+
+  ngOnDestroy() {
+    console.log('ngOnDestroy');
   }
 }

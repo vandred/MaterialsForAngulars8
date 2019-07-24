@@ -36,6 +36,6 @@ export class FromEventComponent implements AfterViewInit {
   }
 
   unsubscr() {
-
+    // 
   }
 }

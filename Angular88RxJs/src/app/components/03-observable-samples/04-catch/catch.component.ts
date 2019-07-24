@@ -6,7 +6,7 @@ import { map, delay, take, retry, catchError, retryWhen } from 'rxjs/operators';
   templateUrl: './catch.component.html'
 })
 export class CatchComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     var source = of(1, 2, 3, 4, 5, 6)
@@ -16,8 +16,8 @@ export class CatchComponent implements OnInit {
           return x;
         })
       )
-      //.pipe(catchError(() => of("error text"))); // обработка исключения
-      //.pipe(retry(3)) // попытаться перезапустить Observable укзанное количество раз
+      // .pipe(catchError(() => of("error text"))); // обработка исключения
+      // .pipe(retry(3)); // попытаться перезапустить Observable укзанное количество раз
       .pipe(retryWhen(err => err.pipe(delay(1000)).pipe(take(3)))); // перезапустить с интервалом в 1 сек. три раза
 
     source.subscribe(

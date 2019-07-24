@@ -6,16 +6,16 @@ import { Observable } from 'rxjs';
   templateUrl: './errors.component.html'
 })
 export class ErrorsComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     console.clear();
 
     // создание Observable
-    let source = Observable.create(function(observer) {
-      let id = setTimeout(function() {
+    let source = Observable.create(function (observer) {
+      let id = setTimeout(function () {
         try {
-          throw 'my error'; // исключение
+          throw 'It is my error'; // исключение
         } catch (error) {
           observer.error(error);
         }
@@ -23,22 +23,22 @@ export class ErrorsComponent implements OnInit {
 
       console.log('started');
 
-      return function() {
+      return function () {
         console.log('dispose called');
         clearTimeout(id);
       };
     });
 
     let subject = source.subscribe(
-      function(value) {
+      function (value) {
         // onNext
         console.log('next ' + value);
       },
-      function(error) {
+      function (error) {
         // onError
         console.error('In subject ' + error);
       },
-      function() {
+      function () {
         // onCompleted
         console.info('completed');
       }

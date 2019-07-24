@@ -16,7 +16,7 @@ export class PostHttpSampleComponent implements OnInit {
   password: FormControl;
   roles: FormControl;
 
-  constructor(private _http: HttpClient ) { }
+  constructor(private _http: HttpClient) { }
 
   ngOnInit() {
     this.createFormControls();
@@ -41,11 +41,12 @@ export class PostHttpSampleComponent implements OnInit {
   onSubmit() {
     console.log('this.UserForm.value', this.userForm.value);
     this._http
-      .post('https://iteahubback.azurewebsites.net/api/Account/AddUser', this.userForm.value)
+      .post('https://iteahubangular7.azurewebsites.net/api/Account/AddUser',
+        this.userForm.value)
       .subscribe(x => {
         console.log('result', x);
       },
-      error => console.error('error bad'));
+        error => console.error('error bad'));
   }
 
 }

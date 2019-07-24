@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-get-users',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetUsersComponent implements OnInit {
 
-  constructor() { }
+  values: string[] = [];
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    this.http.get('https://iteahubangular7.azurewebsites.net/api/Values')
+      .subscribe((resp: Array<string>) => {
+        console.log('resp', resp);
+        this.values = resp;
+      });
   }
+
+
 
 }

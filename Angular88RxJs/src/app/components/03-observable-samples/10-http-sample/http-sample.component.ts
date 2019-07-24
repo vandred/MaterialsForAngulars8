@@ -9,21 +9,21 @@ import { map, filter, catchError, mergeMap } from 'rxjs/operators';
   styleUrls: ['./http-sample.component.css']
 })
 export class HttpSampleComponent {
-  posts: string[] = [];
+  posts = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   download() {
     this.posts = [];
 
     this.http
-      .get('http://jsonplaceholder.typicode.com/posts/')
-       // .pipe(map(response => response))
+      .get('http://jsonplaceholder.typicode.com/posts')
+      .pipe(map(response => response))
       // .pipe(filter<any>(post => post.userId === 5))
-      //.pipe(map(post => post.body))
+      .pipe(map((post: any) => post))
       .subscribe(post => {
-       console.log('post', post);
-       this.posts.push(post.toString());
+        console.log('post', post);
+        this.posts.push(post);
 
       });
   }
