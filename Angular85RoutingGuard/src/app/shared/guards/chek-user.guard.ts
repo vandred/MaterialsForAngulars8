@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, CanActivate, CanDeactivate } from '@angular/router';
+import { ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, CanActivate, CanDeactivate, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -7,12 +7,19 @@ import { Observable } from 'rxjs';
 })
 export class ChekUserGuard implements CanActivate, CanDeactivate<ComponentCanDeactivate> {
 
+  /**
+   *
+   */
+  constructor(public router: Router) {
+
+  }
   canActivate() {
-    if (confirm('Are you sure? ')) {
-      console.log('Implement delete functionality here');
-      return true;
-    }
-    console.log('CanActivare', true);
+    // if (confirm('Are you sure? ')) {
+    //   console.log('Implement delete functionality here');
+    //   return true;
+    // }
+    // console.log('CanActivare', true);
+    this.router.navigate(['/book']);
     return false;
   }
 
