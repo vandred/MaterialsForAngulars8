@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-post-values',
@@ -20,12 +20,21 @@ export class PostValuesComponent implements OnInit {
 
   postData() {
 
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'my-auth-token'
+      })
+    };
+
     this.respons = 'start';
+
     console.log('postObject', this.postObject);
-    this.http.post('https://iteahubangular7.azurewebsites.net/api/Values',
-      this.postObject)
+
+    this.http.post<PostClass>('https://iteahubangular7.azurewebsites.net/api/Values',
+      this.postObject, httpOptions)
       .subscribe((resp: any) => {
-        // console.log('resp', resp);
+        console.log('resp', resp);
         // this.respons = resp;
       });
   }
