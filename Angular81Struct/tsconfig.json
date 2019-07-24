@@ -19,7 +19,12 @@
       "dom"
     ],
     "paths": {
-      "@shared/*": ["./src/sharedfolder/*"]
+      "@shared/*": [
+        "./src/sharedfolder/*"
+      ],
+      "@auth/*": [
+        "./src/sharedfolder/class/*"
+      ]
     }
   }
 }
