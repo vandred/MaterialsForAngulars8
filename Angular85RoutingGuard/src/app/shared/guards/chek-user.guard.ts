@@ -10,7 +10,7 @@ export class ChekUserGuard implements CanActivate, CanDeactivate<ComponentCanDea
   /**
    *
    */
-  constructor(public router: Router) {
+  constructor(private router: Router) {
 
   }
   canActivate() {
